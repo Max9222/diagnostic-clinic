@@ -15,6 +15,7 @@ class Area(models.Model):
         verbose_name = 'направление'
         verbose_name_plural = 'направления'
 
+
 class Team(models.Model):
 
     name = models.CharField(max_length=150, verbose_name='имя')
@@ -48,3 +49,23 @@ class Clinic(models.Model):
     class Meta:
         verbose_name = 'клиника'
         verbose_name_plural = 'клиники'
+
+
+class Client(models.Model):
+
+    email = models.EmailField(unique=True, verbose_name='Email')
+    name = models.CharField(max_length=100, verbose_name='ФИО', **NULLABLE)
+    phone = models.CharField(max_length=35, verbose_name='номер телефона', **NULLABLE)
+    comment = models.TextField(verbose_name='Комментарий', **NULLABLE)
+    avatar = models.ImageField(upload_to='clinic/', verbose_name='аватар', **NULLABLE)
+
+    user = models.ForeignKey(
+        settings.AUTH_USER_MODEL, on_delete=models.CASCADE, verbose_name='Клиент', **NULLABLE
+    )
+
+    def __str__(self):
+        return f'{self.email}'
+
+    class Meta:
+        verbose_name = "Клиент"
+        verbose_name_plural = "Клиенты"
