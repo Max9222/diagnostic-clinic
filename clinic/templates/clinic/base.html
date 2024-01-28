@@ -96,24 +96,25 @@
                             </button>
 
                             <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
+
                                 <ul id="nav" class="navbar-nav ml-auto">
                                     <li class="nav-item active">
-                                        <a class="page-scroll active" href="#home">Клиника</a>
+                                        <a href="{% url 'clinic:clinic_list' %}" class="btn btn-link">Клиника</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="page-scroll" href="#about">Наша команда</a>
+                                        <a href="{% url 'clinic:team_list' %}" class="btn btn-link">Наша команда</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="page-scroll" href="#services">Услуги</a>
+                                        <a class="btn btn-link" href="#services">Услуги</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="page-scroll" href="#team">Направления</a>
+                                        <a class="btn btn-link" href="#team">Направления</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="page-scroll" href="#blog">Блог</a>
+                                        <a class="btn btn-link" href="#blog">Блог</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="page-scroll" href="#contact">Контакты</a>
+                                        <a class="btn btn-link" href="#contact">Контакты</a>
                                     </li>
                                 </ul>
                             </div> <!-- navbar collapse -->
