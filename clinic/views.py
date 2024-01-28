@@ -1,3 +1,7 @@
 from django.shortcuts import render
+from django.views.generic import ListView
+from clinic.models import Clinic
 
-# Create your views here.
+
+class ClinicListView(ListView):
+    model = Clinic
