@@ -1,24 +1,27 @@
 {% extends 'clinic/base.html' %}
-{% block content %}
-<div class="card mb-4 box-shadow text-center">
-    <div class="card-header">
-        <h3 class="card-title">
-            {{ object.head }}
-        </h3>
-    </div>
-    <div class="card-body">
-        <div class="d-flex justify-content-between align-items-center">
-            <div class="card-body">
-                <h1>
-                    {{ object.name  }}
-                </h1>
-                <h1>
-                    {{ object.description }}
-                </h1>
 
-                </p>
+{% block content %}
+{% load static %}
+
+<!--========================= service-section start ========================= -->
+<section class="jumbotron text-center pt-120">
+    <div class="container">
+        <h1 class="jumbotron-heading">{{ object.name }}</h1>
+    </div>
+</section>
+<section id="services" class="service-section pt-120">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+                <div class="about-content text-center mb-55">
+                    <div class="service-content">
+                        <h4>{{ object.description }}</h4>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-</div>
+</section>
+<!--========================= service-section end ========================= -->
 {% endblock %}

@@ -7,6 +7,7 @@ app_name = ClinicConfig.name
 
 urlpatterns = [
     path('', ClinicListView.as_view(), name='clinic_list'),
+    path('main/', MainView.as_view(), name='main'),
 
     path('team/', TeamListView.as_view(), name='team_list'),
 
@@ -16,6 +17,6 @@ urlpatterns = [
     path('blog/create/', BlogCreateView.as_view(), name='create_blog'),
     path('blog/', BlogListView.as_view(), name='blog_list'),
     path('blog/<int:pk>/', BlogDetailView.as_view(), name='blog_view'),
-    path('edit/<int:pk>/', BlogUpdateView.as_view(), name='blog_edit'),
+    path('blog/edit/<int:pk>/', BlogUpdateView.as_view(), name='blog_edit'),
     path('blog/delete/<int:pk>/', BlogDeleteView.as_view(), name='blog_delete'),
 ]

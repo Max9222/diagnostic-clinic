@@ -8,22 +8,15 @@
     <section class="slider-section">
         <div class="slider-active slick-style">
             <div class="single-slider img-bg"
-                 style="background-image:url('{% static 'img/slider/slider-1.jpg' %}');">
+                 style="background-image:url('{% static 'img/sliders/slider-1.jpg' %}');">
                 <div class="container">
                     <div class="row">
                         <div class="col-xl-7 col-lg-8 col-md-10">
                             <div class="slider-content">
-                                <h1 data-animation="fadeInDown" data-duration="1.5s" data-delay=".5s">Complete
-                                    Healthcare Solution
-                                </h1>
-                                <p data-animation="fadeInLeft" data-duration="1.5s" data-delay=".7s">Lorem ipsum
-                                    dolor sit amet, consetetur sadipscing elitr, sed dinonumy eirmod tempor invidunt
-                                    ut labore et dolore magna aliquyam erat. Lorem ipsum dolor sit amet, consetetur
-                                    sadipscing elitr.
-                                </p>
-                                <a href="#about" class="btn theme-btn page-scroll" data-animation="fadeInUp"
-                                   data-duration="1.5s"
-                                   data-delay=".9s">Learn More</a>
+                                <h1 data-animation="fadeInDown" data-duration="1.5s" data-delay=".5s">Большой выбор
+                                    направлений</h1>
+                                <p data-animation="fadeInLeft" data-duration="1.5s" data-delay=".7s"></p>
+                                <a href="{% url 'clinic:area_list' %}" class="btn theme-btn btn-link">Перейти</a>
                             </div>
                         </div>
                     </div>
@@ -35,38 +28,23 @@
                     <div class="row">
                         <div class="col-xl-7 col-lg-8 col-md-10">
                             <div class="slider-content">
-                                <h1 data-animation="fadeInDown" data-duration="1.5s" data-delay=".5s">Best Doctors
-                                    and Equipments in Town
-                                </h1>
-                                <p data-animation="fadeInLeft" data-duration="1.5s" data-delay=".7s">Lorem ipsum
-                                    dolor sit amet, consetetur sadipscing elitr, sed dinonumy eirmod tempor invidunt
-                                    ut labore et dolore magna aliquyam erat. Lorem ipsum dolor sit amet, consetetur
-                                    sadipscing elitr.</p>
-                                <a href="#contact" class="btn theme-btn page-scroll" data-animation="fadeInUp"
-                                   data-duration="1.5s"
-                                   data-delay=".9s">Make
-                                    Appoinment</a>
+                                <h1 data-animation="fadeInDown" data-duration="1.5s" data-delay=".5s">Лучшие врачи</h1>
+                                <p data-animation="fadeInLeft" data-duration="1.5s" data-delay=".7s"></p>
+                                <a href="{% url 'clinic:team_list' %}" class="btn theme-btn btn-link">Перейти</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="single-slider img-bg"
-                 style="background-image:url('{% static 'img/slider/slider-3.jpg' %}');">
+                 style="background-image:url('{% static 'img/sliders/slider-3.jpg' %}');">
                 <div class="container">
                     <div class="row">
                         <div class="col-xl-7 col-lg-8 col-md-10">
                             <div class="slider-content">
-                                <h1 data-animation="fadeInDown" data-duration="1.5s" data-delay=".5s">Your Health is
-                                    Our Top Priority
-                                </h1>
-                                <p data-animation="fadeInLeft" data-duration="1.5s" data-delay=".7s">Lorem ipsum
-                                    dolor sit amet, consetetur sadipscing elitr, sed dinonumy eirmod tempor invidunt
-                                    ut labore et dolore magna aliquyam erat. Lorem ipsum dolor sit amet, consetetur
-                                    sadipscing elitr.</p>
-                                <a href="#services" class="btn theme-btn page-scroll" data-animation="fadeInUp"
-                                   data-duration="1.5s"
-                                   data-delay=".9s">Our Services</a>
+                                <h1 data-animation="fadeInDown" data-duration="1.5s" data-delay=".5s">Наш Блог</h1>
+                                <p data-animation="fadeInLeft" data-duration="1.5s" data-delay=".7s"></p>
+                                <a href="{% url 'clinic:team_list' %}" class="btn theme-btn btn-link">Перейти</a>
                             </div>
                         </div>
                     </div>
@@ -76,9 +54,6 @@
     </section>
     <!-- ========================= slider-section end ========================= -->
 </div>
-</header>
-<!-- ========================= header end ========================= -->
-
 
 <!--========================= we-do-section start========================= -->
 <section class="we-do-section pt-150">
@@ -163,13 +138,12 @@
                                 </div>
                             </div>
                             {% endfor %}
-
                         </div>
-
                     </div>
+
+                    <a href="{% url 'clinic:team_list' %}" class="btn theme-btn wow fadeInUp" data-wow-delay=".8s">Наши
+                        специалисты</a>
                 </div>
-                <a href="{% url 'clinic:team_list' %}" class="btn theme-btn wow fadeInUp" data-wow-delay=".8s">Все
-                    специалисты</a>
             </div>
         </div>
     </div>
@@ -183,93 +157,93 @@
         <img src="{% static 'img/shapes/shape-1.svg' %}" alt="">
     </div>
     <div class="container">
-        <div class="row">
-            <div class="col-xl-8 mx-auto">
-                <div class="section-title text-center mb-55">
-                    <span class="wow fadeInDown" data-wow-delay=".2s">Услуги</span>
-                    <h2 class="mb-15 wow fadeInUp" data-wow-delay=".4s">Наши медицинские услуги</h2>
-                    <p class="wow fadeInUp" data-wow-delay=".6s">
-                        <br class="d-none d-lg-block"></p>
+        <div class="about-content text-center mb-55">
+            <div class="row">
+                <div class="col-xl-8 mx-auto">
+                    <div class="section-title text-center mb-55">
+                        <span class="wow fadeInDown" data-wow-delay=".2s">Услуги</span>
+                        <h2 class="mb-15 wow fadeInUp" data-wow-delay=".4s">Наши медицинские услуги</h2>
+                        <p class="wow fadeInUp" data-wow-delay=".6s">
+                            <br class="d-none d-lg-block"></p>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-4 col-md-6">
-                <div class="service-item mb-30">
-                    <div class="service-icon mb-25">
-                        <img src="{% static 'img/logo/log_1.svg' %}">
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-item mb-30">
+                        <div class="service-icon mb-25">
+                            <img src="{% static 'img/logo/log_1.svg' %}">
+                        </div>
+                        <div class="service-content">
+                            <h4>Аппаратная косметология</h4>
+                            <p>Anti-Age клеточное восстановление лица и тела посредством аппаратных методик.</p>
+                        </div>
+                        <div class="service-overlay img-bg"></div>
                     </div>
-                    <div class="service-content">
-                        <h4>Аппаратная косметология</h4>
-                        <p>Anti-Age клеточное восстановление лица и тела посредством аппаратных методик.</p>
-                        <a href="#" class="read-more">Перейти <i class="lni lni-arrow-right"></i></a>
-                    </div>
-                    <div class="service-overlay img-bg"></div>
                 </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="service-item mb-30">
-                    <div class="service-icon mb-25">
-                        <img src="{% static 'img/logo/log_2.svg' %}">
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-item mb-30">
+                        <div class="service-icon mb-25">
+                            <img src="{% static 'img/logo/log_2.svg' %}">
+                        </div>
+                        <div class="service-content">
+                            <h4>Терапевтическая косметология</h4>
+                            <p>Уходовые процедуры для лица и тела.</p>
+                        </div>
+                        <div class="service-overlay img-bg"></div>
                     </div>
-                    <div class="service-content">
-                        <h4>Терапевтическая косметология</h4>
-                        <p>Уходовые процедуры для лица и тела.</p>
-                        <a href="#" class="read-more">Перейти <i class="lni lni-arrow-right"></i></a>
-                    </div>
-                    <div class="service-overlay img-bg"></div>
                 </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="service-item mb-30">
-                    <div class="service-icon mb-25">
-                        <img src="{% static 'img/logo/log_3.svg' %}">
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-item mb-30">
+                        <div class="service-icon mb-25">
+                            <img src="{% static 'img/logo/log_3.svg' %}">
+                        </div>
+                        <div class="service-content">
+                            <h4>Пластическая хирургия</h4>
+                            <p>Коррекция лица и тела хирургическим путем.</p>
+                        </div>
+                        <div class="service-overlay img-bg"></div>
                     </div>
-                    <div class="service-content">
-                        <h4>Пластическая хирургия</h4>
-                        <p>Коррекция лица и тела хирургическим путем.</p>
-                        <a href="#" class="read-more">Перейти <i class="lni lni-arrow-right"></i></a>
-                    </div>
-                    <div class="service-overlay img-bg"></div>
                 </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="service-item mb-30">
-                    <div class="service-icon mb-25">
-                        <img src="{% static 'img/logo/log_4.svg' %}">
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-item mb-30">
+                        <div class="service-icon mb-25">
+                            <img src="{% static 'img/logo/log_4.svg' %}">
+                        </div>
+                        <div class="service-content">
+                            <h4>Иньекционная косметология</h4>
+                            <p>Восстановление лица и тела инъекционными методиками.</p>
+                        </div>
+                        <div class="service-overlay img-bg"></div>
                     </div>
-                    <div class="service-content">
-                        <h4>Иньекционная косметология</h4>
-                        <p>Восстановление лица и тела инъекционными методиками.</p>
-                        <a href="#" class="read-more">Перейти <i class="lni lni-arrow-right"></i></a>
-                    </div>
-                    <div class="service-overlay img-bg"></div>
                 </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="service-item mb-30">
-                    <div class="service-icon mb-25">
-                        <img src="{% static 'img/logo/log_5.svg' %}">
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-item mb-30">
+                        <div class="service-icon mb-25">
+                            <img src="{% static 'img/logo/log_5.svg' %}">
+                        </div>
+                        <div class="service-content">
+                            <h4>Плазмотерапия</h4>
+                            <p>Восстановление лица и тела за счет плазмы человеческой.</p>
+                        </div>
+                        <div class="service-overlay img-bg"></div>
                     </div>
-                    <div class="service-content">
-                        <h4>Плазмотерапия</h4>
-                        <p>Восстановление лица и тела за счет плазмы человеческой.</p>
-                        <a href="#" class="read-more">Перейти <i class="lni lni-arrow-right"></i></a>
-                    </div>
-                    <div class="service-overlay img-bg"></div>
                 </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="service-item mb-30">
-                    <div class="service-icon mb-25">
-                        <img src="{% static 'img/logo/log_6.svg' %}">
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-item mb-30">
+                        <div class="service-icon mb-25">
+                            <img src="{% static 'img/logo/log_6.svg' %}">
+                        </div>
+                        <div class="service-content">
+                            <h4>Привентивная косметология</h4>
+                            <p>Замедление старения на ранних стадиях.</p>
+                        </div>
+                        <div class="service-overlay img-bg"></div>
                     </div>
-                    <div class="service-content">
-                        <h4>Привентивная косметология</h4>
-                        <p>Замедление старения на ранних стадиях.</p>
-                        <a href="#" class="read-more">Перейти <i class="lni lni-arrow-right"></i></a>
-                    </div>
-                    <div class="service-overlay img-bg"></div>
+                </div>
+                <div class="blog-content">
+                    <a href="{% url 'clinic:area_list' %}" class="btn theme-btn wow fadeInUp" data-wow-delay=".8s">Наш
+                        Направления</a>
                 </div>
             </div>
         </div>
@@ -277,70 +251,65 @@
 </section>
 <!--========================= service-section end ========================= -->
 
-
-
-<
-
 <!-- ========================= blog-section start ========================= -->
 <section id="blog" class="blog-section pt-150">
     <div class="shape shape-7">
         <img src="{% static 'img/shapes/shape-6.svg' %}" alt="">
     </div>
     <div class="container">
-        <div class="row">
-            <div class="col-xl-8 mx-auto">
-                <div class="section-title text-center mb-55">
-                    <span class="wow fadeInDown" data-wow-delay=".3s">Блог</span>
-                    <h2 class="mb-15 wow fadeInUp" data-wow-delay=".4s">Последние новости</h2>
-                    <p class="wow fadeInUp" data-wow-delay=".4s"><br class="d-none d-lg-block"></p>
+        <div class="about-content text-center mb-55">
+            <div class="row">
+                <div class="col-xl-8 mx-auto">
+                    <div class="section-title text-center mb-55">
+                        <span class="wow fadeInDown" data-wow-delay=".3s">Блог</span>
+                        <h2 class="mb-15 wow fadeInUp" data-wow-delay=".4s">Последние новости</h2>
+                        <p class="wow fadeInUp" data-wow-delay=".4s"><br class="d-none d-lg-block"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-4 col-lg-4 col-md-6">
+                    <div class="single-blog mb-30 wow fadeInUp" data-wow-delay=".2s">
+                        <div class="blog-img">
+                            <a href="#"><img src="{% static 'img/blog/blog-1.jpg' %}"></a>
+                        </div>
+                        <div class="blog-content">
+                            <h4><a href="#">Молодость с молоду</a></h4>
+                            <p>Начинай заранее</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6">
+                    <div class="single-blog mb-30 wow fadeInUp" data-wow-delay=".2s">
+                        <div class="blog-img">
+                            <a href="#"><img src="{% static 'img/blog/blog-2.jpg' %}" alt="Card image cap"></a>
+                        </div>
+                        <div class="blog-content">
+                            <h4><a href="#">Anti-age, уход за кожей лица</a></h4>
+                            <p>Новый взгляд в мире косметологии</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6">
+                    <div class="single-blog mb-30 wow fadeInUp" data-wow-delay=".3s">
+                        <div class="blog-img">
+                            <a href="#"><img src="{% static 'img/blog/blog-3.jpg' %}" alt="Card image cap"></a>
+                        </div>
+                        <div class="blog-content">
+                            <h4><a href="#">Стоит делать пластическую операцию</a></h4>
+                            <p>В наше время полно других не менее эффективных средств</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="blog-content">
+                    <a href="{% url 'clinic:blog_list' %}" class="btn theme-btn wow fadeInUp" data-wow-delay=".8s">Наш
+                        Блог</a>
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-xl-4 col-lg-4 col-md-6">
-                <div class="single-blog mb-30 wow fadeInUp" data-wow-delay=".2s">
-                    <div class="blog-img">
-                        <a href="#"><img src="{% static 'img/blog/blog-1.png' %}" alt=""></a>
-                    </div>
-                    <div class="blog-content">
-                        <h4><a href="#">250+ Medical Tips We Just
-                            Had to Share</a></h4>
-                        <p>Lorem ipsum dolor sirtewt amertse consetetur sadipscing elitr, sedqw dinoumy eirmod tempor
-                            invidunt
-                            sedrsu.</p>
-                        <a class="read-more" href="#">Read More <i class="lni lni-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-4 col-lg-4 col-md-6">
-                <div class="single-blog mb-30 wow fadeInUp" data-wow-delay=".4s">
-                    <div class="blog-img">
-                        <a href="#"><img src="{% static 'img/blog/blog-2.png' %}" alt=""></a>
-                    </div>
-                    <div class="blog-content">
-                        <h4><a href="#">100+ Medical Tips We Just Had to Share</a></h4>
-                        <p>Lorem ipsum dolor sirtewt amertse consetetur sadipscing elitr, sedqw dinoumy eirmod tempor
-                            invidunt
-                            sedrsu.</p>
-                        <a class="read-more" href="#">Read More <i class="lni lni-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-4 col-lg-4 col-md-6">
-                <div class="single-blog mb-30 wow fadeInUp" data-wow-delay=".6s">
-                    <div class="blog-img">
-                        <a href="#"><img src="{% static 'img/blog/blog-3.png' %}" alt=""></a>
-                    </div>
-                    <div class="blog-content">
-                        <h4><a href="#">250+ Medical Tips We Just Had to Share</a></h4>
-                        <p>Lorem ipsum dolor sirtewt amertse consetetur sadipscing elitr, sedqw dinoumy eirmod tempor
-                            invidunt
-                            sedrsu.</p>
-                        <a class="read-more" href="#">Read More <i class="lni lni-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
+    </div>
     </div>
 </section>
 <!-- ========================= blog-section end ========================= -->
@@ -359,7 +328,7 @@
 
                 <div class="section-title text-center mb-55">
                     <span class="wow fadeInDown"
-                          data-wow-delay=".2s">Наши клиники</span>
+                          data-wow-delay=".2s">Адрес клиники</span>
 
                     <h2 class="mb-15 wow fadeInUp" data-wow-delay=".4s">г. Санкт-Петербург, ул. Гороховая д. 1</h2>
                     <p class="wow fadeInUp" data-wow-delay=".6s">Пн - Вс: 09:00-21:00<br/></p></br>

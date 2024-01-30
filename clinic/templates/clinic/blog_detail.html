@@ -1,39 +1,33 @@
 {% extends 'clinic/base.html' %}
 
 {% block content %}
-<div class="album py-5 bg-light">
+{% load static %}
+
+<!--========================= service-section start ========================= -->
+<section class="jumbotron text-center pt-120">
+    <div class="container">
+        <h1 class="jumbotron-heading">Блог</h1>
+    </div>
+</section>
+<section id="services" class="service-section pt-120">
+
     <div class="container">
         <div class="row">
-            <div class="col-md-4">
-                <div class="card mb-4 box-shadow">
-                    <img class="card-img-top"
-                         src="/media/{{ object.image }}"
+            <div class="col-sm">
+                <div class="about-content text-center mb-55">
+                    <img class="card-img-top" style="width: 18rem;"
+                         src="/media/{{ object.preview   }}"
                          alt="Card image cap">
-                    <div class="card-header">
-                        <h3 class="card-title">
-                            Блог "{{ object.title }}"
-                        </h3>
-                    </div>
-                    <div class="card-body">
+                   <div class="service-content">
+                        <h4>{{ object.title }}</h4>
+                        <p>{{ object.content }}</p>
 
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div class="card-body">
-                                <p>
-                                    {{ object.body }}
-                                </p>
-                                <div class="card-footer">
-                                    Просмотры: {{ object.views_count }}
-                                </div>
-                            </div>
-                        </div>
+
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-
-</main>
-
-
+</section>
+<!--========================= service-section end ========================= -->
 {% endblock %}

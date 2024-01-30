@@ -1,30 +1,35 @@
 {% extends 'clinic/base.html' %}
 
 {% block content %}
+{% load static %}
 
-<div class="col-12 mb-5">
-    <a class="btn btn-outline-primary" href="{% url 'clinic:create_blog' %}">Написать отзыв</a>
-</div>
-{% for object in object_list %}
-<div class="col-md-4">
-    <div class="card mb-4 box-shadow">
-        <div class="card-body">
-            <p class="card-text">
-                {{ object|title }}
-            </p>
-            <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                    <a href="{% url 'clinic:blog_view' object.pk %}" type="button"
-                       class="btn btn-success">Читать</a>
-                    <a href="{% url 'clinic:blog_edit' object.pk %}" type="button"
-                       class="btn btn-warning">Редактировать</a>
+<!--========================= service-section start ========================= -->
+<section class="jumbotron text-center pt-120" >
+    <div class="container">
+        <h1 class="jumbotron-heading">Блог</h1>
+    </div>
+</section>
+<section id="services" class="service-section pt-120">
+
+    <div class="container">
+        <div class="row">
+            {% for object in object_list %}
+            <div class="col-sm">
+                <div class="about-content text-center mb-55">
+                    <img class="card-img-top" style="width: 18rem;"
+                         src="/media/{{ object.preview  }}"
+                         alt="Card image cap">
+                    <div class="service-content">
+                        <h4>{{ object.title }}</h4>
+                        <p>{{ object.content }}</p>
+                        <a href="{% url 'clinic:blog_view' object.pk %}" class="read-more">Перейти<i class="lni lni-arrow-right"></i></a>
+                    </div>
+                    <div class="service-overlay img-bg"></div>
                 </div>
-                <a href="{% url 'clinic:blog_delete' object.pk %}" type="button"
-                       class="btn btn-danger">Удалить</a>
             </div>
+            {% endfor %}
         </div>
     </div>
-</div>
-{% endfor %}
-
+</section>
+<!--========================= service-section end ========================= -->
 {% endblock %}
