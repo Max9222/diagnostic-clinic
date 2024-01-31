@@ -1,0 +1,27 @@
+{% extends 'clinic/base.html' %}
+
+{% block content %}
+{% load static %}
+
+<!--========================= service-section start ========================= -->
+<section class="jumbotron text-center pt-120">
+    <div class="container">
+        <h1 class="jumbotron-heading">{{ object.name }}</h1>
+    </div>
+</section>
+<section id="services" class="service-section pt-120">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+                <div class="about-content text-center mb-55">
+                    <div class="service-content">
+                        <h4>{{ object.description }}</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--========================= service-section end ========================= -->
+{% endblock %}

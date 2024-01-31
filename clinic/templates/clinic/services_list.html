@@ -1,0 +1,25 @@
+{% extends 'clinic/base.html' %}
+
+{% block content %}
+{% load static %}
+<section class="jumbotron text-center pt-120">
+    <div class="container">
+        <h1 class="jumbotron-heading">Наши услуги</h1>
+    </div>
+</section>
+<section id="services" class="service-section pt-120">
+    <div class="container text-center">
+        <div class="row justify-content-around" >
+            {% for object in object_list %}
+            <div class="item d-sm-flex justify-content-between align-items-center border p-lg-2 p-1">
+                <div class="item__left pr-2 mb-sm-0 mb-1"><h5>{{ object.name }}</h5></div>
+                <div class="item__right d-lg-flex d-sm-block d-flex align-items-center justify-content-sm-end justify-content-between">
+                    <div class="item__price text-sm-center text-right"><strong class="text-nowrap"><h5>{{ object.price }} руб</h5></strong>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock %}

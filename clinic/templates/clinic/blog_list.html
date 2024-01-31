@@ -1,0 +1,35 @@
+{% extends 'clinic/base.html' %}
+
+{% block content %}
+{% load static %}
+
+<!--========================= service-section start ========================= -->
+<section class="jumbotron text-center pt-120" >
+    <div class="container">
+        <h1 class="jumbotron-heading">Блог</h1>
+    </div>
+</section>
+<section id="services" class="service-section pt-120">
+
+    <div class="container">
+        <div class="row">
+            {% for object in object_list %}
+            <div class="col-sm">
+                <div class="about-content text-center mb-55">
+                    <img class="card-img-top" style="width: 18rem;"
+                         src="/media/{{ object.preview  }}"
+                         alt="Card image cap">
+                    <div class="service-content">
+                        <h4>{{ object.title }}</h4>
+                        <p>{{ object.content }}</p>
+                        <a href="{% url 'clinic:blog_view' object.pk %}" class="read-more">Перейти<i class="lni lni-arrow-right"></i></a>
+                    </div>
+                    <div class="service-overlay img-bg"></div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+<!--========================= service-section end ========================= -->
+{% endblock %}
