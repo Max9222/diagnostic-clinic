@@ -26,3 +26,5 @@
     python3 manage.py loaddata data.json (Сгружаем актуальные данные в БД)
     В корень проекта добавляем файл .env
     python3 manage.py runserver (Запускаем проект)
+
+Зайти в админку можно с помощью: логин: maxoog@bk.ru; пароль: makentoch.
