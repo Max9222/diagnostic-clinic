@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.views.generic import ListView
 
 from clinic.forms import BlogForm
-from clinic.models import Clinic, Team, Area, Blog
+from clinic.models import Clinic, Team, Area, Blog, Services
 from django.urls import reverse_lazy
 from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin, UserPassesTestMixin
 from django.views.generic import ListView, DetailView, UpdateView, CreateView, DeleteView, TemplateView
@@ -66,3 +66,6 @@ class BlogDeleteView(DeleteView):
             raise Http404
         return self.object
 
+
+class ServicesListView(ListView):
+    model = Services

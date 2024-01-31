@@ -88,3 +88,17 @@ class Blog(models.Model):
     class Meta:
         verbose_name = 'Блог'
         verbose_name_plural = 'Блоги'
+
+
+class Services(models.Model):
+
+    name = models.CharField(max_length=100, verbose_name='название', unique=True)
+    description = models.TextField(verbose_name='описание')
+    price = models.IntegerField(verbose_name='стоимость')
+
+    def __str__(self):
+        return f'{self.name}'
+
+    class Meta:
+        verbose_name = 'услуга'
+        verbose_name_plural = 'услуги'

@@ -19,4 +19,6 @@ urlpatterns = [
     path('blog/<int:pk>/', BlogDetailView.as_view(), name='blog_view'),
     path('blog/edit/<int:pk>/', BlogUpdateView.as_view(), name='blog_edit'),
     path('blog/delete/<int:pk>/', BlogDeleteView.as_view(), name='blog_delete'),
+
+    path('services/', ServicesListView.as_view(), name='services_list'),
 ]

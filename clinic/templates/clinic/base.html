@@ -101,7 +101,7 @@
                                         <a href="{% url 'clinic:team_list' %}" class="btn btn-link">Наша команда</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="btn btn-link" href="#services">Услуги</a>
+                                        <a href="{% url 'clinic:services_list' %}" class="btn btn-link">Услуги</a>
                                     </li>
                                     <li class="nav-item">
                                         <a href="{% url 'clinic:area_list' %}" class="btn btn-link">Направления</a>
@@ -152,10 +152,11 @@
                     <div class="col-xl-2 col-lg-3 col-md-6">
                         <div class="footer-widget mb-30">
                             <h4>Ссылки</h4>
-                            <ul class="footer-links"><li class="nav-item active">
+                            <ul class="footer-links">
+                                <li class="nav-item active">
                                 <li><a href="{% url 'clinic:clinic_list' %}" class="btn btn-link">Клиника</a></li>
                                 <li><a href="{% url 'clinic:team_list' %}" class="btn btn-link">Наша команда</a></li>
-                                <li><a href="#" class="btn btn-link">Услуги</a></li>
+                                <li><a href="{% url 'clinic:services_list' %}" class="btn btn-link">Услуги</a></li>
                                 <li><a href="{% url 'clinic:area_list' %}" class="btn btn-link">Направления</a></li>
                                 <li><a href="{% url 'clinic:blog_list' %}" class="btn btn-link">Блог</a></li>
                                 <li><a href="{% url 'clinic:main' %}" class="btn btn-link">Контакты</a></li>
@@ -163,9 +164,27 @@
                             </ul>
                         </div>
                     </div>
+                    <div class="col-xl-2 col-lg-3 col-md-6">
+                        <div class="footer-widget mb-30">
+                            <h4>Часы работы</h4>
+                            <div class="wpb_wrapper">
+                                <p>
+                                    <span class="line-height-2">
+                                    <strong>Понедельник:</strong> 9:00 – 19:00<br>
+                                    <strong>Вторник:</strong> 9:00 – 19:00<br>
+                                    <strong>Среда:</strong> 9:00 – 19:00<br>
+                                    <strong>Четверг:</strong> 9:00 – 19:00<br>
+                                    <strong>Пятница:</strong> 11:00 – 16:00<br>
+                                    <strong>Суббота:</strong> CLOSED<br>
+                                    <strong>Воскресенье:</strong> CLOSED<br>
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
 
                     <div class="col-xl-3 col-lg-12 col-md-7">
-                        <div class="footer-widget mb-30">
+                        <div class="footer-widget text-center mb-55" >
                             <h4>Мы на карте</h4>
                             <div class="map-canvas">
                                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.772941742556!2d30.308081013646884!3d59.93590977480909!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696311a55996d73%3A0x6401a259cc5d350e!2z0JPQvtGA0L7RhdC-0LLQsNGPINGD0LsuLCAxLCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywg0KDQvtGB0YHQuNGPLCAxOTAwMDA!5e0!3m2!1sru!2sus!4v1706431786941!5m2!1sru!2sus"
@@ -177,8 +196,8 @@
                 </div>
             </div>
             <div class="copyright-area">
-                <p class="mb-0 text-center">Designed and Developed By <a href="https://uideck.com/"
-                                                                         rel="nofollow">UIdeck</a></p>
+                <p class="mb-0 text-center"> <a href="https://uideck.com/"
+                                                                         rel="nofollow"></a></p>
             </div>
         </div>
     </footer>
