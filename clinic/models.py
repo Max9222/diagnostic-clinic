@@ -3,8 +3,8 @@ from django.conf import settings
 
 NULLABLE = {'blank': True, 'null': True}
 
-class Area(models.Model):
 
+class Area(models.Model):
     name = models.CharField(max_length=100, verbose_name='название', unique=True)
     description = models.TextField(verbose_name='описание')
 
@@ -17,7 +17,6 @@ class Area(models.Model):
 
 
 class Team(models.Model):
-
     name = models.CharField(max_length=150, verbose_name='имя')
     phone = models.CharField(max_length=25, verbose_name='телефон')
     email = models.EmailField(verbose_name='почта', unique=True)
@@ -53,7 +52,6 @@ class Clinic(models.Model):
 
 
 class Client(models.Model):
-
     email = models.EmailField(unique=True, verbose_name='Email')
     name = models.CharField(max_length=100, verbose_name='ФИО', **NULLABLE)
     phone = models.CharField(max_length=35, verbose_name='номер телефона', **NULLABLE)
@@ -73,7 +71,6 @@ class Client(models.Model):
 
 
 class Blog(models.Model):
-
     title = models.CharField(max_length=100, verbose_name='заголовок')
     slug = models.CharField(max_length=100, verbose_name='slug', null=True)
     content = models.TextField(verbose_name='содержимое')
@@ -91,7 +88,6 @@ class Blog(models.Model):
 
 
 class Services(models.Model):
-
     name = models.CharField(max_length=100, verbose_name='название', unique=True)
     description = models.TextField(verbose_name='описание')
     price = models.IntegerField(verbose_name='стоимость')

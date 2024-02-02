@@ -1,7 +1,10 @@
-asgiref==3.7.2
-Django==5.0.1
-pillow==10.2.0
-psycopg2-binary==2.9.9
-python-dotenv==1.0.1
-sqlparse==0.4.4
-typing_extensions==4.9.0
+asgiref
+Django
+pillow
+psycopg2-binary
+python-dotenv
+sqlparse
+typing_extensions
+ipython
+sqlparse
+pillow-avif-plugin
